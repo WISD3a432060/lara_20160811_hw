@@ -11,6 +11,19 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+
+Route::get('/',function(){
+    return'home';
+    });
+Route::get('home/{name?}',['as'=>'home.index',function($name=
+    'Everybody'){
+    return'home,'.$name;
+    }]);
+Route::get('about/{name?}',['as'=>'about.index',function($name=
+    'Everybody'){
+    return'about,'.$name;
+    }]);
+Route::get('news/{name?}',['as'=>'news.index',function($name=
+    'Everybody'){
+    return'news,'.$name;
+    }]);
